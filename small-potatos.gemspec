@@ -8,10 +8,10 @@ Gem::Specification.new do |gem|
   gem.version       = Small::Potatos::VERSION
   
   gem.authors       = ["Cheng Guang-nan"]
-  gem.email         = ["chengguangnan@me.com"]
+  gem.email         = ["cheng@chengguangnan.com"]
   
   gem.summary       = %q{Small tools for the command line.}
-  gem.homepage      = "https://github.com/guangnan/small-potatos"
+  gem.homepage      = "https://github.com/chengguangnan/small-potatos"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -20,5 +20,6 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'actionpack'
   gem.add_dependency 'hirb'
+  gem.add_dependency 'redis'
 
 end

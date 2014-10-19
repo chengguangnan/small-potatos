@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "redis"
+
+redis = Redis.new
+
+cursor = 0
+
+key = ARGV.first
+
+loop do
+  cursor, array = redis.sscan(key, cursor)
+  puts array
+  break if cursor.to_i == 0
+end
